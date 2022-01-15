@@ -1,0 +1,38 @@
+.slogan {
+  padding: 48px 0;
+  text-align: center;
+  h1 {
+    font-size: 22px;
+    margin: 0;
+  }
+}
+.flex-container {
+  background-color: #eef3f3;
+  padding: 30px 80px;
+
+  .section-links {
+    width: 15%;
+
+    h4 {
+      font-size: 16px;
+    }
+
+    span {
+      text-decoration: none;
+      color: #5a5a5a;
+      padding-top: 12px;
+      font-size: 13px;
+    }
+  }
+}
+
+.copyright {
+  padding: 24px 0 ;
+  text-align: center;
+  background-color: #132f51;
+  p {
+    margin: 0;
+    color: white;
+    font-size: 11px;
+  }
+}

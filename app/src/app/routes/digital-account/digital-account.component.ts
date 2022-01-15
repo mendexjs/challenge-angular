@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DigitalAccountMock} from "../../shared/mocks/digital_account.mocks";
 
 @Component({
   selector: 'app-digital-account',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./digital-account.component.scss']
 })
 export class DigitalAccountComponent implements OnInit {
-
+  digitalAccount = DigitalAccountMock;
   constructor() { }
 
   ngOnInit(): void {

@@ -1,1 +1,11 @@
-<p>action-card works!</p>
+<div class="card">
+  <h1>{{content.title}}</h1>
+  <p>{{content.description}}</p>
+  <mat-form-field appearance="fill" *ngFor="let input of content.inputs" class="example-full-width">
+    <input matInput [brmasker]=" input.masks || {}" placeholder="Digite seu CNPJ">
+  </mat-form-field>
+  <button mat-stroked-button *ngFor="let btn of content.buttons"
+          [ngStyle]="btn.styles">
+    {{ btn.title }}
+  </button>
+</div>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {FooterMock} from "../../mocks/footer.mocks";
 
 @Component({
   selector: 'app-footer',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
-
+  content = FooterMock;
   constructor() { }
 
   ngOnInit(): void {

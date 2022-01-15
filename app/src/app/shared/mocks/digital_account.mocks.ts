@@ -3,7 +3,7 @@ import {DARK_GRAY, WHITE_COLOR, YELLOW_COLOR} from "./home.mocks";
 export const DigitalAccountMock = {
   mainContent: {
     styles: {
-      'background-image': 'url(/assets/images/home/digital-account-stock.png) center no-repeat',
+      'background': "url('assets/images/home/banner-header-contadigital.jpg') 45% 0/cover",
     },
     titleContent: {
       title: {
@@ -28,7 +28,8 @@ export const DigitalAccountMock = {
         {
           name: 'cnpj',
           placeholder: 'Digite o seu CNPJ',
-          type: 'text'
+          type: 'text',
+          masks: {person: true}
         },
       ],
       buttons: [
@@ -41,37 +42,39 @@ export const DigitalAccountMock = {
         }
       ]
     },
-    infoCards: [
+  },
+  infoCards: {
+    styles: {
+      width: '180px',
+      height: '150px',
+      'border-top': `5px solid ${YELLOW_COLOR}`
+    },
+    cards: [
       {
-        icon: 'extract-icon',
-        description: 'Extratos, pagamentos, depósitos e transferências.',
-        color: YELLOW_COLOR,
+        icon: 'payment',
+        description: 'Extratos, pagamentos, depósitos e transferências.'
       },
       {
-        icon: 'phone-icon',
-        description: 'Saia do banco tradicional.',
-        color: YELLOW_COLOR,
+        icon: 'home',
+        description: 'Saia do banco tradicional.'
       },
       {
-        icon: 'globe-icon',
-        description: '100% digital.',
-        color: YELLOW_COLOR,
+        icon: 'wifi_tethering',
+        description: '100% digital.'
       },
       {
-        icon: 'timer-icon',
-        description: 'Agilidade.',
-        color: YELLOW_COLOR,
+        icon: 'timer',
+        description: 'Agilidade.'
       },
       {
-        icon: 'like-icon',
-        description: 'Sem burocracia.',
-        color: YELLOW_COLOR,
+        icon: 'thumb_up',
+        description: 'Sem burocracia.'
       },
     ],
   },
   descriptionSection: {
-    stockImage: '/assets/images/digital-account/stock.png',
-    backgroundColor: YELLOW_COLOR,
+    stockImage: '/assets/images/home/conta-modelo.png',
+    backgroundImage: YELLOW_COLOR,
     phoneStockContent: {
       title: 'Sem anuidade ou taxa de manutenção',
       description: 'Extratos consolidados, pagamentos, depósitos e transferências que vão descomplicar as finanças da sua empresa.'
@@ -79,17 +82,17 @@ export const DigitalAccountMock = {
     secondaryAction: {
       topicsList: [
         {
-          icon: 'payment-icon',
+          icon: 'payment',
           title: 'Pagamentos',
           description: 'Um sistema rápido e 100% digital que aceita diversos pagamentos por código de barras.'
         },
         {
-          icon: 'receive-icon',
+          icon: 'attach_money',
           title: 'Depósitos',
           description: 'Receba e faça depósitos de forma simples e ágil através do pagamento de boletos ou Transferência Eletrônica (TED).'
         },
         {
-          icon: 'money-icon',
+          icon: 'sync',
           title: 'Transferências',
           description: 'Plataforma simples e intuitiva que ajuda a fazer as transferências da sua empresa.'
         }
@@ -100,6 +103,7 @@ export const DigitalAccountMock = {
             'background-color': WHITE_COLOR,
             'width': '70%',
             'color': DARK_GRAY,
+            'margin': '20px auto'
           },
           title: 'Abra a sua conta'
         }

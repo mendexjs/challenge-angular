@@ -1,0 +1,46 @@
+.content {
+  height: 600px;
+
+
+  .col-1 {
+    width: 35%;
+    padding: 20px 80px 0;
+    display: flex;
+    align-items: flex-end;
+    .phone {
+      height: 100%;
+      width: 100%;
+      margin-left: 50px;
+      background: url("src/assets/images/home/phone.png") no-repeat;
+      background-size: cover;
+
+      h2 {
+        padding: 50px 0 10px 65px;
+        color: white;
+        font-size: 26px;
+        width: 38%;
+        font-weight: 400;
+      }
+      p {
+        padding: 0px 0 10px 65px;
+        color: white;
+        width: 65%;
+        font-size: 14px;
+      }
+    }
+  }
+  .col-2 {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    img {
+      height: 110%;
+      //bottom: 0;
+    }
+  }
+  .col-3 {
+    padding: 140px 5% 0;
+    width: 25%;
+  }
+}

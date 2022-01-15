@@ -1,1 +1,12 @@
-<p>anticipation works!</p>
+<app-main-content [mainContent]="anticipation.mainContent">
+  <app-info-cards [content]="anticipation.infoCards"></app-info-cards>
+</app-main-content>
+<div style="width: 100%; height: 120px"></div>
+<app-description-section [content]="anticipation.descriptionSection"></app-description-section>
+<div class="observations">
+  <p *ngFor="let obs of anticipation.advantageSection?.observations">{{obs}}</p>
+</div>
+<div class="advantageContent">
+  <h1>{{anticipation.advantageSection.title}}</h1>
+  <app-info-cards [content]="anticipation.advantageSection.infoCards"></app-info-cards>
+</div>

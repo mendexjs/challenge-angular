@@ -1,0 +1,11 @@
+<div class="grid-container">
+  <div class="card-container" *ngFor="let card of content.cards">
+    <div class="card pointer" [ngStyle]="content.styles">
+      <mat-icon>{{card.icon}}</mat-icon>
+      <p>{{card.description}}</p>
+    </div>
+  </div>
+</div>
+<div class="flex-container flex-column observations" *ngIf="content.observations">
+  <span *ngFor="let obs of content.observations">{{obs}}</span>
+</div>

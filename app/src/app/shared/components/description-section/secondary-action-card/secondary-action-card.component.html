@@ -1,1 +1,15 @@
-<p>secondary-action-card works!</p>
+<div class="flex-container flex-column">
+  <div *ngFor="let item of content.topicsList" class="flex-container topic-row">
+    <mat-icon>{{item.icon}}</mat-icon>
+    <div class="flex-container flex-column topic-content">
+      <h4>{{item.title}}</h4>
+      <p>{{item.description}}</p>
+    </div>
+  </div>
+  <h1 *ngFor="let line of content.title?.textLines" [ngStyle]="content.title.styles">{{line}}</h1>
+  <p class="description" *ngFor="let line of content.description?.textLines" [ngStyle]="content.description.styles">{{line}}</p>
+  <button mat-stroked-button *ngFor="let btn of content.buttons"
+  [ngStyle]="btn.styles">
+    {{ btn.title }}
+  </button>
+</div>

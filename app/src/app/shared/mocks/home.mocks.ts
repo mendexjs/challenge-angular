@@ -8,14 +8,14 @@ export const DARK_GRAY    = '#333';
 export const HomeMock = {
   mainContent: {
     styles: {
-      'background-image': 'url(/assets/images/home/home-stock.png) center no-repeat',
+      'background': "url('assets/images/home/banner-header-home.jpg') 45% 0/cover",
     },
     titleContent: {
       title: {
         text: 'Trust é tudo,',
         styles: {
           'color': GREEN_COLOR,
-          'font-size': '50px'
+          'font-size': '50px',
         }
       },
       subtitle: {
@@ -33,35 +33,37 @@ export const HomeMock = {
         }
       }
     },
-    serviceCards: [
+  },
+  serviceCards: {
+    cards: [
       {
         title: 'CONTA DIGITAL',
         description: 'É tudo, menos banco.',
         color: YELLOW_COLOR,
-        backgroundImage: '/assets/images/yellow_arrow.png',
-        redirectPath: '/conta-digital'
+        backgroundImage: "url('assets/images/home/yellow_arrow.png')",
+        redirectPath: 'home/conta-digital'
       },
       {
         title: 'ANTECIPAÇÃO',
         description: 'Antes de tudo, o melhor para seu negócio.',
         color: ORANGE_COLOR,
-        backgroundImage: '/assets/images/orange_arrow.png',
-        redirectPath: '/antecipacao'
+        backgroundImage: "url('assets/images/home/orange_arrow.png')",
+        redirectPath: 'home/antecipacao'
       },
       {
         title: 'Empréstimos',
         description: 'Em até 2 horas*, a gente aprova o seu crédito.',
         color: PINK_COLOR,
-        backgroundImage: '/assets/images/pink_arrow.png',
-        redirectPath: '/emprestimos'
+        backgroundImage: "url('assets/images/home/pink_arrow.png')",
+        redirectPath: 'home/emprestimos'
       }
     ],
-    observations: [
-      '*Aprovação do crédito em até 2h após o envio da documentação completa e válida. Empréstimo sujeito a aprovação cadastral e demais condições do produto.'
-    ]
   },
+  observations: [
+    '*Aprovação do crédito em até 2h após o envio da documentação completa e válida. Empréstimo sujeito a aprovação cadastral e demais condições do produto.'
+  ],
   descriptionSection: {
-    backgroundImage: '/assets/images/home/description-stock.png',
+    backgroundImage: "url('assets/images/home/description-stock.jpg') 45% 0/cover",
     secondaryAction: {
       title: {
         styles: {
@@ -83,8 +85,8 @@ export const HomeMock = {
       buttons: [
         {
           styles: {
-            'background-color': 'linear-gradient(90deg,#2a437b,#4dab4f)',
-            'width': '30%',
+            'background': 'linear-gradient(90deg,#2a437b,#4dab4f)',
+            'width': '40%',
             'color': WHITE_COLOR,
           },
           title: 'Conheça mais'

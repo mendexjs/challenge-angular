@@ -1,1 +1,12 @@
-<p>footer works!</p>
+<div class="slogan">
+  <h1>{{content.title}}</h1>
+</div>
+<div class="flex-container">
+  <div *ngFor="let section of content.sections; let i = index" class="col-{{i+1}} section-links flex-container flex-column">
+    <h4>{{section.name}}</h4>
+    <span class="pointer" *ngFor="let link of section.links">{{link}}</span>
+  </div>
+</div>
+<div class="copyright">
+  <p *ngFor="let obs of content.observations"> {{obs}} </p>
+</div>

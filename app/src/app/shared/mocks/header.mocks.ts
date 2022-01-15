@@ -2,16 +2,16 @@
 export const HeaderMock = {
   navMenu: [
     {
-      title: 'Conta de Paghamento Digital',
-      redirectRoute: '/home/digital-account'
+      title: 'Conta de Pagamento Digital',
+      redirectRoute: 'home/conta-digital'
     },
     {
       title: 'Antecipação',
-      redirectRoute: '/home/anticipation'
+      redirectRoute: 'home/antecipacao'
     },
     {
       title: 'Empréstimos',
-      redirectRoute: '/home/loans'
+      redirectRoute: 'home/emprestimos'
     }
   ],
   buttons: [

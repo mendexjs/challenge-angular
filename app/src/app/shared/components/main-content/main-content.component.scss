@@ -1,0 +1,17 @@
+.first-section {
+  height: 600px;
+  .content{
+    padding: 7% 10% 0;
+
+    .col-1 {
+      width: 75%;
+    }
+    .col-2 {
+      width: 25%;
+    }
+  }
+}
+.component-content {
+  margin-top: -30px !important;
+  z-index: 99;
+}

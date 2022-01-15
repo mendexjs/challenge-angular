@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AnticipationMock} from "../../shared/mocks/anticipation.mocks";
 
 @Component({
   selector: 'app-anticipation',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./anticipation.component.scss']
 })
 export class AnticipationComponent implements OnInit {
+  anticipation = AnticipationMock;
 
   constructor() { }
 

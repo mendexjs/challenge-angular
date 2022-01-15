@@ -1,9 +1,9 @@
-import {DARK_GRAY, PINK_COLOR, WHITE_COLOR} from "./home.mocks";
+import {DARK_GRAY, ORANGE_COLOR, PINK_COLOR, WHITE_COLOR} from "./home.mocks";
 
 export const LoansMock = {
   mainContent: {
     styles: {
-      'background-image': 'url(/assets/images/home/loans-stock.png) center no-repeat',
+      'background': "url('assets/images/home/banner-header-emprestimo.jpg') 45% 0/cover",
     },
     titleContent: {
       title: {
@@ -21,7 +21,7 @@ export const LoansMock = {
         }
       },
       description: {
-        textLines: ['A Trust quer ver seu negócio decolando, por isso, nós oferecemos esses recursos para ajudar sua empresa:'],
+        textLines: ['A Trust quer ver seu negócio decolando', 'por isso, nós oferecemos esses recursos para', 'ajudar sua empresa:'],
         styles: {
           'color': WHITE_COLOR,
           'font-size': '15px'
@@ -30,9 +30,7 @@ export const LoansMock = {
     },
     actionCard: {
       title: 'Faça seu empréstimo na Trust',
-      description: {
-        'text': 'é a melhor opção para você que precisa de uma análise de crédito personalizada e ágil, com taxas mais justas para você investir no seu negócio.'
-      },
+      description: 'é a melhor opção para você que precisa de uma análise de crédito personalizada e ágil, com taxas mais justas para você investir no seu negócio.',
       buttons: [
         {
           styles: {
@@ -43,31 +41,33 @@ export const LoansMock = {
         }
       ]
     },
-    infoCards: [
+  },
+  infoCards: {
+    styles: {
+      width: '180px',
+      height: '150px',
+      'border-top': `5px solid ${PINK_COLOR}`
+    },
+    cards: [
       {
-        icon: 'tax-icon',
-        description: 'Basta informar o CNPJ da sua empresa para iniciarmos a análise.',
-        color: PINK_COLOR,
+        icon: 'money',
+        description: 'Basta informar o CNPJ da sua empresa para iniciarmos a análise.'
       },
       {
-        icon: 'display-icon',
-        description: 'Do pedido de empréstimo até a assinatura do contrato: o processo é 100% digital e em até 2 horas¹.',
-        color: PINK_COLOR,
+        icon: 'attach_money',
+        description: 'Do pedido de empréstimo até a assinatura do contrato: o processo é 100% digital e em até 2 horas¹.'
       },
       {
-        icon: 'like-icon',
-        description: 'Análise de crédito personalizada com poucos cliques e sem burocracias.',
-        color: PINK_COLOR,
+        icon: 'check_circle_outline',
+        description: 'Análise de crédito personalizada com poucos cliques e sem burocracias.'
       },
       {
-        icon: 'cash-icon',
-        description: 'Pagamento em até 6 vezes.',
-        color: PINK_COLOR,
+        icon: 'payment',
+        description: 'Pagamento em até 6 vezes.'
       },
       {
-        icon: 'cash-icon',
-        description: 'Taxas competitivas pensadas exatamente para o que você precisa.',
-        color: PINK_COLOR,
+        icon: 'show_chart',
+        description: 'Taxas competitivas pensadas exatamente para o que você precisa.'
       },
     ],
     observations: [
@@ -76,8 +76,8 @@ export const LoansMock = {
     ]
   },
   descriptionSection: {
-    stockImage: '/assets/images/loans/stock.png',
-    backgroundColor: PINK_COLOR,
+    stockImage: '/assets/images/home/emprestimos-modelo.png',
+    backgroundImage: PINK_COLOR,
     phoneStockContent: {
       title: 'Um modelo que ajuda sua empresa nas horas de aperto: Empréstimo em 6x.',
       description: 'É a melhor opção para quem precisa de uma análise de crédito rápida e personalizada.'
@@ -86,13 +86,11 @@ export const LoansMock = {
       description: {
         styles: {
           'color': WHITE_COLOR,
-          'font-size': '16px'
+          'font-size': '16px',
+          'width': '60%'
         },
         textLines: [
-          'Ele ajuda você a investir',
-          'no seu negócio em até',
-          'seis parcelas e com taxas',
-          'mais justas.'
+          'Ele ajuda você a investir no seu negócio em até seis parcelas e com taxas mais justas.'
         ]
       },
       buttons: [

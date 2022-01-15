@@ -1,1 +1,9 @@
-<p>service-cards-grid works!</p>
+<div class="grid-container">
+  <div class="card pointer" *ngFor="let card of services.cards" [ngStyle]="{
+    'background-image': card.backgroundImage
+  }"
+  (click)="navTo(card.redirectPath)">
+    <h4>{{card.title}}</h4>
+    <p>{{card.description}}</p>
+  </div>
+</div>

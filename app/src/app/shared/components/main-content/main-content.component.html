@@ -1,1 +1,13 @@
-<p>main-content works!</p>
+<div class="first-section" [ngStyle]="mainContent?.styles">
+  <div class="content flex-container">
+    <div class="col-1">
+      <app-title-content [content]="mainContent?.titleContent"></app-title-content>
+    </div>
+    <div class="col-2">
+      <app-action-card *ngIf="mainContent.actionCard" [content]="mainContent.actionCard"></app-action-card>
+    </div>
+  </div>
+</div>
+<div class="component-content">
+  <ng-content></ng-content>
+</div>

@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import {HeaderMock} from "../../mocks/header.mocks";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {Router} from "@angular/router";
+import {AuthService} from "../../services/auth.service";
 
 export const errorMessages: any = {
-  email_invalid: 'Formato de email inválido.',
-  email_required: 'Email obrigatório.',
+  user_name_invalid: 'Nome de usuário muito curto.',
+  user_name_required: 'Nome de usuário obrigatório.',
   password_invalid: 'Senha inválida',
   password_required: 'Insira a senha',
 }
@@ -18,15 +20,28 @@ export class HeaderComponent implements OnInit {
 
   contentMock = HeaderMock;
   loginForm: FormGroup = new FormGroup({
-    email: new FormControl('', [Validators.required, Validators.email]),
+    userName: new FormControl('', [Validators.required, Validators.minLength(3)]),
     password: new FormControl('', [Validators.required, Validators.minLength(6)])
   });
-  constructor() { }
+  constructor(
+    private router: Router,
+    private auth: AuthService
+  ) { }
 
   ngOnInit(): void {
   }
 
-  navTo(redirectRoute: string) {
+  async navTo(redirectRoute: string) {
+    console.log(redirectRoute);
+    await this.router.navigateByUrl(redirectRoute);
+  }
 
+  async login($event: MouseEvent) {
+    if (this.loginForm.valid){
+      await this.auth.login(this.loginForm.value);
+      await this.router.navigateByUrl('bem-vindo');
+    } else {
+      $event.stopPropagation();
+    }
   }
 }

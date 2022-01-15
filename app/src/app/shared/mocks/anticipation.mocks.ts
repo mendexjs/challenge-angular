@@ -1,9 +1,9 @@
-import {DARK_GRAY, ORANGE_COLOR, WHITE_COLOR} from "./home.mocks";
+import {DARK_GRAY, ORANGE_COLOR, WHITE_COLOR, YELLOW_COLOR} from "./home.mocks";
 
 export const AnticipationMock = {
   mainContent: {
     styles: {
-      'background-image': 'url(/assets/images/home/anticipation-stock.png) center no-repeat',
+      'background': "url('assets/images/home/banner-header-antecipacao.jpg') 45% 0/cover",
     },
     titleContent: {
       title: {
@@ -17,7 +17,7 @@ export const AnticipationMock = {
         textLines: ['de recebíveis', 'Desconto de Duplicata totalmente digital'],
         styles: {
           'color': WHITE_COLOR,
-          'font-size': '29px'
+          'font-size': '26px'
         }
       },
       description: {
@@ -31,6 +31,7 @@ export const AnticipationMock = {
         {
           styles: {
             'background-color': 'transparent',
+            'border': '1px solid white',
             'color': WHITE_COLOR,
             'font-size': '13px'
           },
@@ -44,7 +45,8 @@ export const AnticipationMock = {
         {
           name: 'cnpj',
           placeholder: 'Digite o seu CNPJ',
-          type: 'text'
+          type: 'text',
+          masks: {person: true}
         },
       ],
       buttons: [
@@ -57,24 +59,31 @@ export const AnticipationMock = {
         }
       ]
     },
-    infoCards: [
+  },
+  infoCards: {
+    styles: {
+      width: '180px',
+      height: '150px',
+      'border-top': `5px solid ${ORANGE_COLOR}`
+    },
+    cards: [
       {
-        icon: 'tax-icon',
+        icon: 'money',
         description: 'Taxas competitivas com o mercado.',
         color: ORANGE_COLOR,
       },
       {
-        icon: 'display-icon',
+        icon: 'check_circle_outline',
         description: 'Atendimento ágil e personalizado, com soluções eficientes.',
         color: ORANGE_COLOR,
       },
       {
-        icon: 'like-icon',
+        icon: 'payment',
         description: 'Assessoria administrativa para cobrança de títulos ou direitos de créditos.',
         color: ORANGE_COLOR,
       },
       {
-        icon: 'cash-icon',
+        icon: 'attach_money',
         description: 'Transformamos suas contas a receber em Dinheiro vivo.',
         color: ORANGE_COLOR,
       },
@@ -85,8 +94,8 @@ export const AnticipationMock = {
     ]
   },
   descriptionSection: {
-    stockImage: '/assets/images/anticipation/stock.png',
-    backgroundColor: ORANGE_COLOR,
+    stockImage: '/assets/images/home/antecipacao-modelo.png',
+    backgroundImage: ORANGE_COLOR,
     phoneStockContent: {
       title: 'O que é Antecipação de duplicatas?',
       description: 'A antecipação de duplicatas consiste em antecipar o valor que sua empresa tem a receber das vendas a prazo, à vista.'
@@ -123,31 +132,28 @@ export const AnticipationMock = {
     }
   },
   advantageSection: {
-    infoCards: [
-      {
-        icon: 'money-icon',
-        description: 'Dinheiro em caixa para movimentação dos negócios, evitando o endividamento.',
-        color: ORANGE_COLOR,
+    title: 'Quais as vantagens de antecipar com TRUST?',
+    observations: ['*Aprovação do crédito em até 2h após o envio da documentação completa e válida. Sujeito à aprovação cadastral e demais condições do produto.\n'],
+    infoCards: {
+      styles: {
+        width: '300px',
+        height: '180px',
+        'border-top': `5px solid ${ORANGE_COLOR}`
       },
-      {
-        icon: 'sheet-icon',
-        description: 'Rapidez e agilidade de decisão.',
-        color: ORANGE_COLOR,
-      },
-      {
-        icon: 'pay-icon',
-        description: 'Alívio financeiro para sua empresa, que poderá ter vantagens na compra de matérias-primas à vista e assim otmizar sua produção.',
-        color: ORANGE_COLOR,
-      },
-      {
-        icon: 'hand-shake-icon',
-        description: 'Intermediação entre a empresa e seu fornecedor, transformando a compra de matéria-prima a vista, mais vantajosa, em compra a prazo.',
-        color: ORANGE_COLOR,
-      },
-    ],
-    observations: [
-      '¹Aprovação do crédito em até 2h após o envio da documentação completa e válida.',
-      'Empréstimo sujeito a aprovação cadastral e demais condições do produto.'
-    ]
+      cards: [
+        {
+          icon: 'money',
+          description: 'Dinheiro em caixa para movimentação dos negócios, evitando o endividamento.'},
+        {
+          icon: 'publish',
+          description: 'Rapidez e agilidade de decisão.'},
+        {
+          icon: 'attach_money',
+          description: 'Alívio financeiro para sua empresa, que poderá ter vantagens na compra de matérias-primas à vista e assim otmizar sua produção.'},
+        {
+          icon: 'show_chart',
+          description: 'Intermediação entre a empresa e seu fornecedor, transformando a compra de matéria-prima a vista, mais vantajosa, em compra a prazo.'},
+      ],
+    }
   }
 }

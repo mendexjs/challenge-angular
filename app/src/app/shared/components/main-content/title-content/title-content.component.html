@@ -1,1 +1,11 @@
-<p>title-content works!</p>
+<h2 [ngStyle]="content.title.styles">{{content.title.text}}</h2>
+<h4 *ngFor="let line of content.subtitle?.textLines" [ngStyle]="content.subtitle.styles">{{line}}</h4>
+<div class="flex-container flex-column description">
+  <span *ngFor="let line of content.description.textLines" [ngStyle]="content.description.styles">{{line}}</span>
+</div>
+<div class="flex-container flex-column buttons">
+  <button mat-stroked-button *ngFor="let btn of content.buttons"
+          [ngStyle]="btn.styles">
+    {{ btn.title }}
+  </button>
+</div>
