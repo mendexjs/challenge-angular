@@ -1,0 +1,57 @@
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+h1,h2,h3,h4,h5, p, span {
+  margin: 0;
+  padding: 0;
+}
+
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  //flex-wrap: wrap;
+}
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+.mt-1 {
+  margin-top: 12px;
+}
+.mt-2 {
+  margin-top: 24px;
+}
+.mt-3 {
+  margin-top: 48px;
+}
+.mt-4 {
+  margin-top: 54px;
+}
+
+.mt-5 {
+  margin-top: 64px;
+}
+
+.p-1 {
+  padding: 10px 16px;
+}
+.p-2 {
+  padding: 16px 24px;
+}
+.p-3 {
+  padding: 32px 48px;
+}
+.p-4 {
+  padding: 42px 54px;
+}
+
+.p-5 {
+  padding: 48px 64px;
+}
+
+.pointer {
+  cursor: pointer;
+}

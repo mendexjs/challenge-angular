@@ -1,0 +1,32 @@
+import {NgxUiLoaderConfig} from "ngx-ui-loader";
+
+export const ngxUiLoaderConfig: NgxUiLoaderConfig = {
+  bgsColor: 'red',
+  bgsOpacity: 0.3,
+  bgsPosition: 'center-center',
+  bgsSize: 30,
+  bgsType: 'ball-spin',
+  blur: 6,
+  delay: 0,
+  fastFadeOut: true,
+  fgsColor: '#de17ff',
+  fgsPosition: 'center-center',
+  fgsSize: 70,
+  fgsType: 'square-jelly-box',
+  gap: 82,
+  logoPosition: 'center-center',
+  logoSize: 100,
+  logoUrl: 'assets/images/robot.png',
+  masterLoaderId: 'master',
+  overlayBorderRadius: '0',
+  overlayColor: 'rgba(40, 40, 40, 0.8)',
+  pbColor: '#ff11b3',
+  pbDirection: 'ltr',
+  pbThickness: 3,
+  hasProgressBar: true,
+  text: 'Processando...',
+  textColor: '#ffffff',
+  textPosition: 'center-center',
+  maxTime: -1,
+  minTime: 300
+};
