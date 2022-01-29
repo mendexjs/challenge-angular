@@ -29,7 +29,7 @@ import {MainContentModule} from "./shared/components/main-content/main-content.m
         NgxUiLoaderModule.forRoot(ngxUiLoaderConfig),
         NgxUiLoaderHttpModule.forRoot({showForeground: true}),
         ComponentsModule,
-        MainContentModule
+        MainContentModule,
     ],
   providers: [],
   bootstrap: [AppComponent]

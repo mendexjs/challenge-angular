@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import {HeaderMock} from "../../mocks/header.mocks";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
 import {AuthService} from "../../services/auth.service";
+import { RxjsService } from '../../services/rxjs.service';
 
 export const errorMessages: any = {
   user_name_invalid: 'Nome de usuário muito curto.',
@@ -17,18 +18,33 @@ export const errorMessages: any = {
 })
 export class HeaderComponent implements OnInit {
   errorMessages = errorMessages;
+  private count = 0;
 
   contentMock = HeaderMock;
   loginForm: FormGroup = new FormGroup({
     userName: new FormControl('', [Validators.required, Validators.minLength(3)]),
     password: new FormControl('', [Validators.required, Validators.minLength(6)])
   });
+
+  @Output() newCardCreated = new EventEmitter<string>();
+
   constructor(
     private router: Router,
-    private auth: AuthService
+    private auth: AuthService,
+    private rxjsSv: RxjsService
   ) { }
 
   ngOnInit(): void {
+  }
+
+  addCard() {
+    this.count++;
+    const newCard = {
+      icon: 'person',
+      description: `Meu novo card dinamico ${this.count}`
+    };
+    this.rxjsSv.cardsSubject.next([newCard]);
+    this.newCardCreated.emit('Novo card');
   }
 
   async navTo(redirectRoute: string) {

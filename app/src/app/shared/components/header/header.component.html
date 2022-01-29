@@ -10,6 +10,10 @@
   </div>
 
   <div class="col-3">
+    <button mat-stroked-button (click)="addCard()"  color="primary">
+      <mat-icon>person</mat-icon>
+      criar novo card
+    </button>
     <span *ngFor="let button of contentMock.buttons">
       <button *ngIf="button.action === 'login';else normalBtn" [matMenuTriggerFor]="loginMenu" mat-stroked-button color="primary">
         <mat-icon>{{button.icon}}</mat-icon>
